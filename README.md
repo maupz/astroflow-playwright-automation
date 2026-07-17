@@ -244,56 +244,6 @@ It performs:
 5. Cross-browser tests
 6. Artifact upload
 
-## Publish to a new GitHub repository
-
-Recommended repository name:
-
-```text
-astroflow-playwright-automation
-```
-
-### GitHub CLI
-
-```bash
-git init
-git add .
-git commit -m "test: automate AstroFlow RFQ happy path"
-git branch -M main
-gh auth login
-gh repo create astroflow-playwright-automation \
-  --public \
-  --source=. \
-  --remote=origin \
-  --push
-```
-
-### Without GitHub CLI
-
-Create an empty public repository in GitHub, then:
-
-```bash
-git init
-git add .
-git commit -m "test: automate AstroFlow RFQ happy path"
-git branch -M main
-git remote add origin https://github.com/maupz/astroflow-playwright-automation.git
-git push -u origin main
-```
-
-Do not initialize the remote repository with a README or `.gitignore` when importing this existing local project.
-
-## Suggested commit history
-
-A small, intentional history is stronger than one giant commit:
-
-```text
-chore: initialize Playwright TypeScript project
-test: add RFQ page and component objects
-test: add typed RFQ data builder and happy path
-ci: run Playwright tests in GitHub Actions
-docs: add strategy and interview guide
-```
-
 ## Recommended next scenarios
 
 1. Required fields left empty.
